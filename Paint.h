@@ -45,6 +45,7 @@ public:		// User declarations
 	void circunferencia(float x1, float y1, float X, float Y);
 	void polilinhaAberta(float x1, float y1, float X, float Y);
 	void baldeTinta(float x1, float y1);
+	void polilinhaFechada(float x1, float y1, float X, float Y);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm3 *Form3;

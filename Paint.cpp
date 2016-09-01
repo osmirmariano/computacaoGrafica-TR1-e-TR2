@@ -31,7 +31,7 @@ void __fastcall TForm3::PaintBox1MouseUp(TObject *Sender, TMouseButton Button, T
 	switch(opcao){
 		case 1:
 			//Chamar o Método para reta
-		   linha(x1,y1,X,Y);
+			linha(x1,y1,X,Y);
 			break;
 		case 2:
 			//Chamar o Método para retangulo
@@ -47,6 +47,7 @@ void __fastcall TForm3::PaintBox1MouseUp(TObject *Sender, TMouseButton Button, T
 			break;
 		case 5:
 			//Chamar o Método para Polilinha Fechada
+			polilinhaFechada(x1, y1, X, Y);
 			break;
 		case 6:
 			//Chamar o Método para Balde de Tinta
@@ -65,15 +66,17 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 	if(X < x1)
 	{
 		float recebe;//Variavel auxiliar para a troca
-		recebe  = X;
-		X  = x1;
+		recebe = X;
+		X = x1;
 		x1 = recebe;
 
 		recebe = Y;
 		Y = y1;
 		y1 = recebe;
 	}
-	if(X == x1)//Condição para os casos em que não apresenta coeficiente angular
+	//Condição para os casos em que não apresenta coeficiente angular
+	//Se a reta for perpendicular ao eixo das abscissas não existe
+	if(X == x1)
 	{
 		for(float i = y1; i <= Y; i++)
 		{
@@ -87,6 +90,7 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 		b = (Y - (m * X));
 
 		//Gerando e pintando a  reta.
+		//Reta inclinada para esquerda
 		if( m >= (-1.0) && m <= 1)
 		{
 			for(float i = x1; i <= X; i++)
@@ -95,14 +99,15 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 				PaintBox1->Canvas->Pixels [i][Y] = RGB(0,0,255);//clBlue;
 			}
 		}
+		//Reta inclinada para direita
 		if(m > 1 || m < (-1.0))
 		{
 			if(Y < y1)
 			{
-				float B;
-				B = Y;
+				float aux;
+				aux = Y;
 				Y = y1;
-				y1 = B;
+				y1 = aux;
 			}
 			for(float i = y1; i <= Y; i++)
 			{
@@ -142,6 +147,10 @@ void TForm3::retangulo(float x1, float y1, float X, float Y){
 	   PaintBox1->Canvas->Pixels [x1][i] = clBlack;
 	   PaintBox1->Canvas->Pixels [X][i] = clBlack;
 	}
+	/*linha (x1, y1, x2, y1);
+	linha (x2, y1, x2, y2);
+	linha (x2, y2, x1, y2);
+	linha (x1, y2, x1, y1); */
 }
 //---------------------------------------------------------------------------
 
@@ -165,7 +174,7 @@ void   TForm3::circunferencia(float x1, float y1, float X, float Y){
 }
 //---------------------------------------------------------------------------
 
-void   TForm3::polilinhaAberta(float x1, float y1, float X, float Y){
+void TForm3::polilinhaAberta(float x1, float y1, float X, float Y){
 	if(clickAtual == false)
 	{
 		x2 = x1;
@@ -186,6 +195,16 @@ void   TForm3::baldeTinta(float x1, float y1){
 	   baldeTinta(x1-1, y1);
 	   baldeTinta(x1, y1-1);
   }
+}
+//---------------------------------------------------------------------------
+void TForm3::polilinhaFechada(float x1, float y1, float X, float Y){
+	//
+	clickAtual = false;
+	if(clickAtual == false){
+		x1 = X;
+		y1 = Y;
+		polilinhaAberta(x1, y1, X, Y);
+	}
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm3::SpeedButton1Click(TObject *Sender)
@@ -232,7 +251,7 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 
 void __fastcall TForm3::Button2Click(TObject *Sender)
 {
-	Form3->CleanupInstance();
+	//Form3->CleanupInstance();
 }
 //---------------------------------------------------------------------------
 

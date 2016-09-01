@@ -26,59 +26,101 @@ object Form3: TForm3
     OnMouseUp = PaintBox1MouseUp
   end
   object SpeedButton1: TSpeedButton
-    Left = 18
-    Top = 32
-    Width = 95
-    Height = 33
-    Caption = 'Reta'
+    Left = 8
+    Top = 24
+    Width = 112
+    Height = 43
+    Caption = 'LINHA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -12
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton1Click
   end
   object SpeedButton2: TSpeedButton
-    Left = 18
-    Top = 80
-    Width = 95
-    Height = 33
-    Caption = 'Ret'#226'ngulo'
+    Left = 8
+    Top = 73
+    Width = 112
+    Height = 40
+    Caption = 'RET'#194'NGULO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -12
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton2Click
   end
   object SpeedButton3: TSpeedButton
-    Left = 18
-    Top = 128
-    Width = 95
-    Height = 33
-    Caption = 'Circunfer'#234'ncia'
+    Left = 8
+    Top = 119
+    Width = 112
+    Height = 42
+    Caption = 'CIRCULO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -12
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton3Click
   end
   object SpeedButton4: TSpeedButton
-    Left = 18
-    Top = 176
-    Width = 95
-    Height = 33
-    Caption = 'Polilinha Aberta'
+    Left = 8
+    Top = 167
+    Width = 112
+    Height = 42
+    Caption = 'POL. ABERTA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -11
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton4Click
   end
   object SpeedButton5: TSpeedButton
-    Left = 18
-    Top = 224
-    Width = 95
-    Height = 33
-    Caption = 'Polilinha Fechada'
+    Left = 8
+    Top = 215
+    Width = 112
+    Height = 42
+    Caption = 'POL. FECHADA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -11
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton5Click
   end
   object SpeedButton6: TSpeedButton
-    Left = 18
-    Top = 272
-    Width = 95
-    Height = 33
-    Caption = 'Tinta'
+    Left = 8
+    Top = 263
+    Width = 112
+    Height = 42
+    Caption = 'PINTAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -12
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     OnClick = SpeedButton6Click
   end
   object Button1: TButton
-    Left = 18
-    Top = 318
-    Width = 95
-    Height = 33
-    Caption = 'Sair'
+    Left = 8
+    Top = 311
+    Width = 112
+    Height = 40
+    Caption = 'SAIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBackground
+    Font.Height = -12
+    Font.Name = 'Roboto'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 0
     OnClick = Button1Click
   end
