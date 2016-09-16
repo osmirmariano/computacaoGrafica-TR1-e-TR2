@@ -20,7 +20,7 @@ __published:	// IDE-managed Components
 	TSpeedButton *SpeedButton4;
 	TSpeedButton *SpeedButton5;
 	TSpeedButton *SpeedButton6;
-	TButton *Button1;
+	TSpeedButton *SpeedButton7;
 	void __fastcall PaintBox1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
           int X, int Y);
 	void __fastcall PaintBox1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
@@ -31,13 +31,15 @@ __published:	// IDE-managed Components
 	void __fastcall SpeedButton4Click(TObject *Sender);
 	void __fastcall SpeedButton6Click(TObject *Sender);
 	void __fastcall SpeedButton5Click(TObject *Sender);
-	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall SpeedButton7Click(TObject *Sender);
+	void __fastcall PaintBox1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	int opcao;
-	int clickAtual;
+	bool clickAtual;
 	float x1, x2, y1, y2;
+	float clickx, clicky;
 
 	__fastcall TForm3(TComponent* Owner);
 	void linha(float x1, float x2, float y1, float y2);

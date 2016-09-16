@@ -13,7 +13,8 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 	: TForm(Owner)
 {
 	opcao = 0;
-	Form3->Color = clWhite;
+	Form3->Color=clWhite;
+	//PaintBox1->Color = clWhite;
 
 }
 
@@ -22,7 +23,7 @@ void __fastcall TForm3::PaintBox1MouseDown(TObject *Sender, TMouseButton Button,
 {
 	x1 = X;
 	y1 = Y;
-	Form3->Color=clWhite;
+	//Form3->Color=clWhite;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm3::PaintBox1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
@@ -73,6 +74,9 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 		recebe = Y;
 		Y = y1;
 		y1 = recebe;
+
+		clickx = x1;
+		clicky = y1;
 	}
 	//Condição para os casos em que não apresenta coeficiente angular
 	//Se a reta for perpendicular ao eixo das abscissas não existe
@@ -121,6 +125,7 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 //------Método para gerar os retângulos
 void TForm3::retangulo(float x1, float y1, float X, float Y){
 	float i;
+
 	//Mesma questão da linha, verifica se a coordenada final é menor que a inicial em relação ao eixo X
 	if(X < x1)
 	{
@@ -138,14 +143,14 @@ void TForm3::retangulo(float x1, float y1, float X, float Y){
 	//For para percorrer e colorir as linhas nas horizontais
 	for(i = x1; i <= X; i++)
 	{
-	   PaintBox1->Canvas->Pixels [i][y1] = clBlack;
-	   PaintBox1->Canvas->Pixels [i][Y] = clBlack;
+	   PaintBox1->Canvas->Pixels [i][y1] = clAqua;
+	   PaintBox1->Canvas->Pixels [i][Y] = clAqua;
 	}
 	//For para percorrer e colorir as linhas nas verticais
 	for(i = y1; i <= Y; i++)
 	{
-	   PaintBox1->Canvas->Pixels [x1][i] = clBlack;
-	   PaintBox1->Canvas->Pixels [X][i] = clBlack;
+	   PaintBox1->Canvas->Pixels [x1][i] = clAqua;
+	   PaintBox1->Canvas->Pixels [X][i] = clAqua;
 	}
 	/*linha (x1, y1, x2, y1);
 	linha (x2, y1, x2, y2);
@@ -175,6 +180,7 @@ void   TForm3::circunferencia(float x1, float y1, float X, float Y){
 //---------------------------------------------------------------------------
 
 void TForm3::polilinhaAberta(float x1, float y1, float X, float Y){
+
 	if(clickAtual == false)
 	{
 		x2 = x1;
@@ -199,12 +205,20 @@ void   TForm3::baldeTinta(float x1, float y1){
 //---------------------------------------------------------------------------
 void TForm3::polilinhaFechada(float x1, float y1, float X, float Y){
 	//
+	if(clickAtual){
+		x1 = clickx;
+		y1 = clicky;
+		//linha (clickx, clicky, X, Y);
+		polilinhaAberta(clickx, clickx, X, Y);
+	}
 	clickAtual = false;
-	if(clickAtual == false){
+	/*if(clickAtual == false){
 		x1 = X;
 		y1 = Y;
-		polilinhaAberta(x1, y1, X, Y);
+	   polilinhaAberta(x1, y1, X, Y);
 	}
+	else
+		clickAt*/
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm3::SpeedButton1Click(TObject *Sender)
@@ -243,15 +257,22 @@ void __fastcall TForm3::SpeedButton5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm3::Button1Click(TObject *Sender)
+
+void __fastcall TForm3::Button2Click(TObject *Sender)
+{
+	//Form3->CleanupInstance();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::SpeedButton7Click(TObject *Sender)
 {
 	Form3->Close();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm3::Button2Click(TObject *Sender)
+void __fastcall TForm3::PaintBox1Click(TObject *Sender)
 {
-	//Form3->CleanupInstance();
+	//PaintBox1->Color = clWhite;
 }
 //---------------------------------------------------------------------------
 
