@@ -14,7 +14,6 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 {
 	opcao = 0;
 	Form3->Color=clWhite;
-	//PaintBox1->Color = clWhite;
 
 }
 

@@ -9,6 +9,7 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.Buttons.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
 //---------------------------------------------------------------------------
 class TForm3 : public TForm
 {
@@ -21,6 +22,11 @@ __published:	// IDE-managed Components
 	TSpeedButton *SpeedButton5;
 	TSpeedButton *SpeedButton6;
 	TSpeedButton *SpeedButton7;
+	TImage *Image1;
+	TLabel *Label1;
+	TLabel *Label2;
+	TLabel *Label3;
+	TSplitter *Splitter1;
 	void __fastcall PaintBox1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
           int X, int Y);
 	void __fastcall PaintBox1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
