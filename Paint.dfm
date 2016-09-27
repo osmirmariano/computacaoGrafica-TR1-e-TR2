@@ -29,6 +29,7 @@ object Form3: TForm3
     Top = 200
     Width = 57
     Height = 43
+    Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
     Font.Height = -12
@@ -99,6 +100,7 @@ object Form3: TForm3
     Top = 200
     Width = 57
     Height = 40
+    Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
     Font.Height = -12
@@ -169,6 +171,7 @@ object Form3: TForm3
     Top = 249
     Width = 57
     Height = 42
+    Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
     Font.Height = -12
@@ -239,6 +242,7 @@ object Form3: TForm3
     Top = 249
     Width = 57
     Height = 42
+    Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
     Font.Height = -11
@@ -379,6 +383,7 @@ object Form3: TForm3
     Top = 297
     Width = 57
     Height = 42
+    Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
     Font.Height = -12
@@ -449,6 +454,7 @@ object Form3: TForm3
     Top = 345
     Width = 57
     Height = 39
+    Cursor = crHandPoint
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
@@ -1768,11 +1774,11 @@ object Form3: TForm3
       FEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFE0000}
   end
   object Label1: TLabel
-    Left = 40
+    Left = 24
     Top = 119
-    Width = 101
+    Width = 136
     Height = 14
-    Caption = 'PROF. TANILSON'
+    Caption = 'PROF. TANILSON DIAS'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHotLight
     Font.Height = -12
