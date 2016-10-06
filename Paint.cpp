@@ -94,7 +94,7 @@ void  TForm3::linha(float x1, float y1, float X, float Y){
 
 		//Gerando e pintando a  reta.
 		//Reta inclinada para esquerda
-		if( m >= (-1.0) && m <= 1)
+		if(m >= (-1.0) && m <= 1)
 		{
 			for(float i = x1; i <= X; i++)
 			{

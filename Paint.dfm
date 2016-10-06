@@ -20,6 +20,8 @@ object Form3: TForm3
     Width = 520
     Height = 400
     Cursor = crCross
+    Color = clInfoText
+    ParentColor = False
     OnClick = PaintBox1Click
     OnMouseDown = PaintBox1MouseDown
     OnMouseUp = PaintBox1MouseUp
