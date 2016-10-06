@@ -142,14 +142,14 @@ void TForm3::retangulo(float x1, float y1, float X, float Y){
 	//For para percorrer e colorir as linhas nas horizontais
 	for(i = x1; i <= X; i++)
 	{
-	   PaintBox1->Canvas->Pixels [i][y1] = clAqua;
-	   PaintBox1->Canvas->Pixels [i][Y] = clAqua;
+	   PaintBox1->Canvas->Pixels [i][y1] = clBlack;
+	   PaintBox1->Canvas->Pixels [i][Y] = clBlack;
 	}
 	//For para percorrer e colorir as linhas nas verticais
 	for(i = y1; i <= Y; i++)
 	{
-	   PaintBox1->Canvas->Pixels [x1][i] = clAqua;
-	   PaintBox1->Canvas->Pixels [X][i] = clAqua;
+	   PaintBox1->Canvas->Pixels [x1][i] = clBlack;
+	   PaintBox1->Canvas->Pixels [X][i] = clBlack;
 	}
 	/*linha (x1, y1, x2, y1);
 	linha (x2, y1, x2, y2);
@@ -274,4 +274,5 @@ void __fastcall TForm3::PaintBox1Click(TObject *Sender)
 	//PaintBox1->Color = clWhite;
 }
 //---------------------------------------------------------------------------
+
 

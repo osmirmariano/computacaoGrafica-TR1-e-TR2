@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Align = alCustom
   Caption = 'Computa'#231#227'o Gr'#225'fica - Trabalhos 01 e 02'
-  ClientHeight = 416
+  ClientHeight = 499
   ClientWidth = 704
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,11 +16,11 @@ object Form3: TForm3
   TextHeight = 13
   object PaintBox1: TPaintBox
     Left = 176
-    Top = 8
+    Top = 72
     Width = 520
     Height = 400
     Cursor = crCross
-    Color = clInfoText
+    Color = clBtnFace
     ParentColor = False
     OnClick = PaintBox1Click
     OnMouseDown = PaintBox1MouseDown
@@ -28,7 +28,7 @@ object Form3: TForm3
   end
   object SpeedButton1: TSpeedButton
     Left = 31
-    Top = 200
+    Top = 72
     Width = 57
     Height = 43
     Cursor = crHandPoint
@@ -99,9 +99,9 @@ object Form3: TForm3
   end
   object SpeedButton2: TSpeedButton
     Left = 94
-    Top = 200
+    Top = 72
     Width = 57
-    Height = 40
+    Height = 43
     Cursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBackground
@@ -170,7 +170,7 @@ object Form3: TForm3
   end
   object SpeedButton3: TSpeedButton
     Left = 31
-    Top = 249
+    Top = 137
     Width = 57
     Height = 42
     Cursor = crHandPoint
@@ -241,7 +241,7 @@ object Form3: TForm3
   end
   object SpeedButton4: TSpeedButton
     Left = 94
-    Top = 249
+    Top = 137
     Width = 57
     Height = 42
     Cursor = crHandPoint
@@ -312,7 +312,7 @@ object Form3: TForm3
   end
   object SpeedButton5: TSpeedButton
     Left = 31
-    Top = 297
+    Top = 201
     Width = 57
     Height = 42
     Font.Charset = DEFAULT_CHARSET
@@ -382,7 +382,7 @@ object Form3: TForm3
   end
   object SpeedButton6: TSpeedButton
     Left = 94
-    Top = 297
+    Top = 201
     Width = 57
     Height = 42
     Cursor = crHandPoint
@@ -452,8 +452,8 @@ object Form3: TForm3
     OnClick = SpeedButton6Click
   end
   object SpeedButton7: TSpeedButton
-    Left = 63
-    Top = 345
+    Left = 639
+    Top = 8
     Width = 57
     Height = 39
     Cursor = crHandPoint
@@ -517,8 +517,8 @@ object Form3: TForm3
     OnClick = SpeedButton7Click
   end
   object Image1: TImage
-    Left = 24
-    Top = 8
+    Left = 22
+    Top = 306
     Width = 129
     Height = 105
     Picture.Data = {
@@ -1776,8 +1776,8 @@ object Form3: TForm3
       FEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFE0000}
   end
   object Label1: TLabel
-    Left = 24
-    Top = 119
+    Left = 22
+    Top = 417
     Width = 136
     Height = 14
     Caption = 'PROF. TANILSON DIAS'
@@ -1789,8 +1789,8 @@ object Form3: TForm3
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 15
-    Top = 139
+    Left = 13
+    Top = 437
     Width = 155
     Height = 14
     Caption = 'ALUNO: OSMIR MARIANO'
@@ -1802,8 +1802,8 @@ object Form3: TForm3
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 33
-    Top = 159
+    Left = 31
+    Top = 457
     Width = 118
     Height = 14
     Caption = 'TRABALHO 01 E 02'
@@ -1816,11 +1816,26 @@ object Form3: TForm3
   end
   object Splitter1: TSplitter
     Left = 8
-    Top = 180
+    Top = 278
     Width = 162
     Height = 6
     Align = alCustom
     Color = clActiveBorder
     ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 248
+    Top = 24
+    Width = 238
+    Height = 23
+    Caption = 'IMPLEMENTA'#199#195'O PAINT'
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHotLight
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
   end
 end
